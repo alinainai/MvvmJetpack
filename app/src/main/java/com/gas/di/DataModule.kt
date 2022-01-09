@@ -1,5 +1,5 @@
 
-package com.task.di
+package com.gas.di
 
 import com.task.data.DataRepository
 import com.task.data.DataRepositorySource

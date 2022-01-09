@@ -1,4 +1,4 @@
-package com.task.di
+package com.gas.di
 
 import com.task.data.error.mapper.ErrorMapper
 import com.task.data.error.mapper.ErrorMapperSource

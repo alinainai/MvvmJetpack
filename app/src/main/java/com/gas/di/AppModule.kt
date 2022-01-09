@@ -1,7 +1,6 @@
-package com.task.di
+package com.gas.di
 
 import android.content.Context
-import com.task.App
 import com.task.data.local.LocalData
 import com.task.utils.Network
 import com.task.utils.NetworkConnectivity
