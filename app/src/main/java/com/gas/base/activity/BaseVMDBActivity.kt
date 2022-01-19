@@ -7,14 +7,14 @@ import androidx.lifecycle.ViewModelProvider
 import com.gas.base.BaseViewModel
 import com.gas.base.getVmClazz
 
-abstract class BaseVMDBActivity<VM : BaseViewModel, DB : ViewDataBinding> : AbsBaseActivity<VM>() {
+abstract class BaseVMDBActivity<DB> :BaseVMActivity() {
 
     lateinit var mDataBind: DB
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mDataBind = DataBindingUtil.setContentView(this, layoutId())
         mDataBind.lifecycleOwner = this
-        mViewModel = ViewModelProvider(this).get(getVmClazz(this))
-        initData(savedInstanceState)
+//        mViewModel = ViewModelProvider(this).get(getVmClazz(this))
+//        initData(savedInstanceState)
     }
 }

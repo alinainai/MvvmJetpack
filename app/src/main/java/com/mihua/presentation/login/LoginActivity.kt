@@ -1,6 +1,5 @@
 package com.mihua.presentation.login
 
-import com.gas.base.activity.BaseVMActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
