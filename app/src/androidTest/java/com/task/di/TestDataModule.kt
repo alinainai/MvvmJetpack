@@ -1,6 +1,6 @@
 package com.task.di
 
-import com.gas.di.DataModule
+import com.gas.di.HttpModule
 import com.task.TestDataRepository
 import com.task.data.DataRepositorySource
 import dagger.Binds
@@ -12,7 +12,7 @@ import javax.inject.Singleton
 @Module
 @TestInstallIn(
     components = [SingletonComponent::class],
-    replaces = [DataModule::class]
+    replaces = [HttpModule::class]
 )
 abstract class TestDataModule {
     @Binds

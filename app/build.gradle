@@ -106,6 +106,8 @@ dependencies {
     implementation "com.squareup.retrofit2:converter-moshi:$retrofitVersion"
     implementation "com.squareup.moshi:moshi:$moshiVersion"
     kapt "com.squareup.moshi:moshi-kotlin-codegen:$moshiVersion"
+    implementation "com.squareup.moshi:moshi-kotlin:$moshiVersion"
+
     implementation "com.squareup.okhttp3:logging-interceptor:$okhttpInterceptorVersion"
     implementation("com.github.bumptech.glide:glide:$glid") {
         exclude group: "com.android.support"
@@ -143,6 +145,9 @@ dependencies {
 
     implementation 'com.jakewharton.threetenabp:threetenabp:1.2.4'
     implementation 'com.jakewharton.timber:timber:4.7.1'
+
+    implementation "androidx.room:room-runtime:2.4.0"
+    implementation "androidx.room:room-ktx:2.4.0"
 
 }
 kapt {

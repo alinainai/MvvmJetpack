@@ -3,9 +3,7 @@ package com.util
 import com.squareup.moshi.JsonAdapter
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.Types
-import com.task.data.dto.recipes.Recipes
-import com.task.data.dto.recipes.RecipesItem
-import com.task.data.remote.moshiFactories.MyKotlinJsonAdapterFactory
+import com.gas.http.moshiFactories.MyKotlinJsonAdapterFactory
 import com.task.data.remote.moshiFactories.MyStandardJsonAdapters
 import java.io.File
 import java.lang.reflect.Type

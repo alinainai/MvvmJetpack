@@ -1,13 +1,11 @@
 package com.gas.di
 
-import android.content.Context
-import com.task.data.local.LocalData
-import com.task.utils.Network
-import com.task.utils.NetworkConnectivity
+import com.gas.http.moshiFactories.MyKotlinJsonAdapterFactory
+import com.gas.moshi.MyStandardJsonAdapters
+import com.squareup.moshi.Moshi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import kotlinx.coroutines.Dispatchers
 import javax.inject.Singleton
@@ -15,13 +13,7 @@ import kotlin.coroutines.CoroutineContext
 
 @Module
 @InstallIn(SingletonComponent::class)
-class AppModule {
-    @Provides
-    @Singleton
-    fun provideLocalRepository(@ApplicationContext context: Context): LocalData {
-        return LocalData(context)
-    }
-
+object AppModule {
     @Provides
     @Singleton
     fun provideCoroutineContext(): CoroutineContext {
@@ -30,7 +22,10 @@ class AppModule {
 
     @Provides
     @Singleton
-    fun provideNetworkConnectivity(@ApplicationContext context: Context): NetworkConnectivity {
-        return Network(context)
+    fun provideMoshi(): Moshi {
+        return Moshi.Builder()
+            .add(MyKotlinJsonAdapterFactory())
+            .add(MyStandardJsonAdapters.FACTORY)
+            .build()
     }
 }

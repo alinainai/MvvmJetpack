@@ -3,7 +3,6 @@ package com.task.ui.component.recipes
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.task.data.DataRepository
 import com.task.data.Resource
-import com.task.data.dto.recipes.Recipes
 import com.task.data.error.NETWORK_ERROR
 import com.util.InstantExecutorExtension
 import com.util.MainCoroutineRule
