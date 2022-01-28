@@ -26,7 +26,7 @@ object DbModule {
     typeResponseConverter: TypeResponseConverter
   ): AppDatabase {
     return Room
-      .databaseBuilder(application, AppDatabase::class.java, "Pokedex.db")
+      .databaseBuilder(application, AppDatabase::class.java, "MihuaDex.db")
       .fallbackToDestructiveMigration()
       .addTypeConverter(typeResponseConverter)
       .build()

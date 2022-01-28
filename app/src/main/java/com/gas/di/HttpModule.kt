@@ -1,6 +1,7 @@
-
 package com.gas.di
 
+import com.gas.moshi.MyKotlinJsonAdapterFactory
+import com.gas.moshi.MyStandardJsonAdapters
 import com.squareup.moshi.Moshi
 import com.task.BuildConfig
 import dagger.Module
@@ -50,6 +51,15 @@ object HttpModule {
             .client(okHttpClient)
             .baseUrl("https://pokeapi.co/api/v2/")
             .addConverterFactory(MoshiConverterFactory.create(moshi))
+            .build()
+    }
+
+    @Provides
+    @Singleton
+    fun provideMoshi(): Moshi {
+        return Moshi.Builder()
+            .add(MyKotlinJsonAdapterFactory())
+            .add(MyStandardJsonAdapters.FACTORY)
             .build()
     }
 }

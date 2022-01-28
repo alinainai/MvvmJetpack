@@ -6,17 +6,17 @@ import io.reactivex.disposables.Disposable
 
 open class BaseViewModel:ViewModel() {
 
-    private var compositeDisposable:CompositeDisposable?=null
+    private var mCd:CompositeDisposable?=null
 
     protected fun addDispose(disposable: Disposable){
-        if(compositeDisposable==null){
-            compositeDisposable = CompositeDisposable()
+        if(mCd==null){
+            mCd = CompositeDisposable()
         }
-        compositeDisposable?.add(disposable)
+        mCd?.add(disposable)
     }
 
     override fun onCleared() {
-        compositeDisposable?.clear()
+        mCd?.clear()
         super.onCleared()
     }
 }

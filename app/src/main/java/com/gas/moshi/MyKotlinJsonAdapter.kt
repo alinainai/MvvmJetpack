@@ -1,4 +1,4 @@
-package com.gas.http.moshiFactories
+package com.gas.moshi
 
 import com.squareup.moshi.*
 import com.squareup.moshi.internal.Util

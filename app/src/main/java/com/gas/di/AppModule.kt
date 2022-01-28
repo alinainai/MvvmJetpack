@@ -1,6 +1,6 @@
 package com.gas.di
 
-import com.gas.http.moshiFactories.MyKotlinJsonAdapterFactory
+import com.gas.moshi.MyKotlinJsonAdapterFactory
 import com.gas.moshi.MyStandardJsonAdapters
 import com.squareup.moshi.Moshi
 import dagger.Module
@@ -18,14 +18,5 @@ object AppModule {
     @Singleton
     fun provideCoroutineContext(): CoroutineContext {
         return Dispatchers.IO
-    }
-
-    @Provides
-    @Singleton
-    fun provideMoshi(): Moshi {
-        return Moshi.Builder()
-            .add(MyKotlinJsonAdapterFactory())
-            .add(MyStandardJsonAdapters.FACTORY)
-            .build()
     }
 }
