@@ -17,14 +17,14 @@ class LoginViewModel @Inject constructor(private val repo: LoginRepository) : Ba
 
     private val _loginLiveData = MutableLiveData<Resource<Account>>()
     val loginLiveData: LiveData<Resource<Account>> get() = _loginLiveData
-
-    fun doLogin(userName: String, passWord: String) {
+    fun login(userName: String, passWord: String) {
         viewModelScope.launch {
-//            dataRepository.login(userName, passWord)
-//                loginLiveDataPrivate.value = it
-//            }
+            try {
+                _loginLiveData.value = Resource.success(repo.login(userName, passWord))
+            } catch (e: Exception) {
+                _loginLiveData.value = Resource.fail(-1, "登录错误")
+            }
         }
     }
-
-
 }
+
