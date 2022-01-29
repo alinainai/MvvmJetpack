@@ -1,6 +1,6 @@
 package com.gas.ext.app
 
-import com.task.BuildConfig
+import com.mihua.BuildConfig
 import timber.log.Timber
 
 /**

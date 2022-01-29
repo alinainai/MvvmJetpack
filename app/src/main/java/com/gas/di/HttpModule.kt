@@ -2,8 +2,8 @@ package com.gas.di
 
 import com.gas.moshi.MyKotlinJsonAdapterFactory
 import com.gas.moshi.MyStandardJsonAdapters
+import com.mihua.BuildConfig
 import com.squareup.moshi.Moshi
-import com.task.BuildConfig
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -49,7 +49,7 @@ object HttpModule {
     fun provideRetrofit(okHttpClient: OkHttpClient, moshi: Moshi): Retrofit {
         return Retrofit.Builder()
             .client(okHttpClient)
-            .baseUrl("https://pokeapi.co/api/v2/")
+            .baseUrl("https://www.wanandroid.com/")
             .addConverterFactory(MoshiConverterFactory.create(moshi))
             .build()
     }
