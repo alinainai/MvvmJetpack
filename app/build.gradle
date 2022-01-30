@@ -1,10 +1,10 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
-    id 'kotlin-android-extensions'
     id 'kotlin-kapt'
     id 'kotlin-platform-android'
     id 'dagger.hilt.android.plugin'
+    id("kotlin-parcelize")
 }
 
 
@@ -20,9 +20,9 @@ android {
         vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner "com.task.CustomTestRunner"
     }
-    buildFeatures {
-        viewBinding = true
-    }
+//    buildFeatures {
+//        viewBinding = true
+//    }
     buildTypes {
         debug {
             debuggable true
@@ -37,7 +37,6 @@ android {
     productFlavors {
         dev {
             dimension = 'default'
-            applicationIdSuffix = ".dev"
         }
         prod {
             dimension = 'default'
@@ -76,13 +75,16 @@ android {
     dataBinding {
         enabled = true
     }
+    viewBinding {
+        enabled = true
+    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     //kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
+//    implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
     implementation "androidx.annotation:annotation:$annotationVersion"
     implementation "com.squareup.picasso:picasso:$picassoVersion"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$livedata_ktx"

@@ -1,5 +1,6 @@
 package com.gas.ext.file
 
+import android.util.Log
 import com.gas.ext.app.debug
 import com.gas.ext.io.toFile
 import com.gas.ext.isSpace
@@ -181,7 +182,7 @@ fun unzipFileByKeyword(zipFile: File?, destDir: File?, keyword: String?=null): L
                 val entry = entries.nextElement() as ZipEntry
                 val entryName = entry.name.replace("\\", "/")
                 if (entryName.contains("../")) {
-                    debug("ZipUtils", "entryName: $entryName is dangerous!")
+                    Log.d("ZipUtils", "entryName: $entryName is dangerous!")
                     continue
                 }
                 if (!unzipChildFile(destDir, files, zipClose, entry, entryName)) return files
@@ -191,7 +192,7 @@ fun unzipFileByKeyword(zipFile: File?, destDir: File?, keyword: String?=null): L
                 val entry = entries.nextElement() as ZipEntry
                 val entryName = entry.name.replace("\\", "/")
                 if (entryName.contains("../")) {
-                    debug("ZipUtils", "entryName: $entryName is dangerous!")
+                    Log.d( "ZipUtils","entryName: $entryName is dangerous!")
                     continue
                 }
                 if (entryName.contains(keyword)) {
@@ -257,7 +258,7 @@ fun getFilesPath(zipFile: File?): List<String>? {
     while (entries.hasMoreElements()) {
         val entryName = (entries.nextElement() as ZipEntry).name.replace("\\", "/")
         if (entryName.contains("../")) {
-            debug("ZipUtils", "entryName: $entryName is dangerous!")
+            Log.e("ZipUtils", "entryName: $entryName is dangerous!")
             paths.add(entryName)
         } else {
             paths.add(entryName)

@@ -19,6 +19,7 @@ class LoginViewModel @Inject constructor(private val repo: LoginRepository) : Ba
     val loginLiveData: LiveData<Resource<Account>> get() = _loginLiveData
     fun login(userName: String, passWord: String) {
         viewModelScope.launch {
+            _loginLiveData.value= Resource.Loading
             try {
                 _loginLiveData.value = Resource.success(repo.login(userName, passWord))
             } catch (e: Exception) {
