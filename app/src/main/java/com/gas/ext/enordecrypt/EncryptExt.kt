@@ -1,8 +1,8 @@
 @file:Suppress("unused")
-
-package com.gas.ext.app.enordecrypt
+package com.gas.ext.enordecrypt
 
 import android.util.Base64
+import com.gas.ext.enordecrypt.Encode.base64Encode
 import java.io.File
 import java.io.FileInputStream
 import java.io.IOException
@@ -94,7 +94,9 @@ fun encryptMD5ToString(data: String?): String {
 fun encryptMD5ToString(data: String?, salt: String?): String {
     if (data == null && salt == null) return ""
     if (salt == null) return bytes2HexString(encryptMD5(data!!.toByteArray()))
-    return if (data == null) bytes2HexString(encryptMD5(salt.toByteArray())) else bytes2HexString(encryptMD5((data + salt).toByteArray()))
+    return if (data == null) bytes2HexString(encryptMD5(salt.toByteArray())) else bytes2HexString(
+        encryptMD5((data + salt).toByteArray())
+    )
 }
 
 /**
