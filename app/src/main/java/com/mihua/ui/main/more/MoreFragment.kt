@@ -1,13 +1,12 @@
-package com.mihua.ui.home
+package com.mihua.ui.main.more
 
 import android.os.Bundle
 import android.view.View
 import com.gas.base.fragment.BaseVMFragment
-import com.gas.ext.app.debug
 import com.mihua.R
 
-class HomeFragment : BaseVMFragment() {
-    override fun layoutId() = R.layout.fragment_home
+class MoreFragment : BaseVMFragment() {
+    override fun layoutId() = R.layout.fragment_more
 
     override fun initData(root: View, savedInstanceState: Bundle?) {
     }
