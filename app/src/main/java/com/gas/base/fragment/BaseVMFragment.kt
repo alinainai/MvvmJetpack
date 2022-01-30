@@ -1,24 +1,15 @@
 package com.gas.base.fragment
 
-import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
-abstract class BaseVMFragment : BaseComFragment() {
+abstract class BaseVMFragment : BaseFragment() {
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(layoutId(), container, false)
-    }
+    abstract fun layoutId(): Int
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        initData()
-    }
+    override fun setContent(inflater: LayoutInflater, container: ViewGroup?): View =
+        inflater.inflate(layoutId(), container, false)
 
 
 }
