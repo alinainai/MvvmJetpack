@@ -7,7 +7,7 @@ abstract class BaseVMActivity : BaseActivity() {
 
     abstract fun layoutId(savedInstanceState: Bundle?): Int
 
-    override fun setContent(savedInstanceState: Bundle?) {
+    override fun setLayout(savedInstanceState: Bundle?) {
         setContentView(layoutId(savedInstanceState))
     }
 

@@ -8,7 +8,7 @@ abstract class BaseVMFragment : BaseFragment() {
 
     abstract fun layoutId(): Int
 
-    override fun setContent(inflater: LayoutInflater, container: ViewGroup?): View =
+    override fun setLayout(inflater: LayoutInflater, container: ViewGroup?): View =
         inflater.inflate(layoutId(), container, false)
 
 

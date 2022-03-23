@@ -16,7 +16,7 @@ abstract class BaseFragment : Fragment() {
     /**
      * View 初始化
      */
-    abstract fun setContent(
+    abstract fun setLayout(
         inflater: LayoutInflater,
         container: ViewGroup?
     ): View
@@ -43,7 +43,7 @@ abstract class BaseFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         debug("onCreateView")
-        return setContent(inflater, container)
+        return setLayout(inflater, container)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

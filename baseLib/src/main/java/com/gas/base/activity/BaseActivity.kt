@@ -8,13 +8,13 @@ abstract class BaseActivity : AppCompatActivity() {
 
     protected lateinit var mContext: Context
 
-    abstract fun setContent(savedInstanceState: Bundle?)
+    abstract fun setLayout(savedInstanceState: Bundle?)
     abstract fun initData(savedInstanceState: Bundle?)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mContext = this
-        setContent(savedInstanceState)
+        setLayout(savedInstanceState)
         initData(savedInstanceState)
     }
 

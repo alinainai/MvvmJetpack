@@ -13,6 +13,7 @@ import com.gas.ext.app.gone
 import com.gas.ext.app.visible
 import com.mihua.ljxbao.R
 import com.mihua.ljxbao.bean.Resource
+import com.mihua.ljxbao.ui.ComposeActivity
 import com.mihua.ljxbao.ui.main.MainActivity
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -70,7 +71,8 @@ class LoginActivity : BaseVMActivity() {
                 is Resource.Success -> {
                     loaderView.gone()
                     LogExt.e(it.data.toString())
-                    startActivity(Intent(mContext, MainActivity::class.java))
+//                    startActivity(Intent(mContext, MainActivity::class.java))
+                    startActivity(Intent(mContext, ComposeActivity::class.java))
                 }
             }
         }

@@ -18,10 +18,15 @@
         android:theme="@style/AppTheme"
         tools:ignore="LockedOrientationActivity">
         <activity
+            android:name=".ui.ComposeActivity"
+            android:exported="false"
+            android:label="@string/title_activity_compose"
+            android:theme="@style/AppTheme" />
+        <activity
             android:name=".ui.login.LoginActivity"
+            android:exported="true"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme"
-            android:exported="true">
+            android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -33,18 +38,14 @@
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"
-            tools:ignore="LockedOrientationActivity">
-
-        </activity>
+            tools:ignore="LockedOrientationActivity"></activity>
 
         <meta-data
             android:name="preloaded_fonts"
-            android:resource="@array/preloaded_fonts" />
-         <!--适配华为（huawei）刘海屏-->
+            android:resource="@array/preloaded_fonts" /> <!-- 适配华为（huawei）刘海屏 -->
         <meta-data
             android:name="android.notch_support"
-            android:value="true"/>
-        <!--适配小米（xiaomi）刘海屏-->
+            android:value="true" /> <!-- 适配小米（xiaomi）刘海屏 -->
         <meta-data
             android:name="notch.config"
             android:value="portrait|landscape" />

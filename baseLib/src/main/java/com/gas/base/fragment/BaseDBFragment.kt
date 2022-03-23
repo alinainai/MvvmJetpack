@@ -10,7 +10,7 @@ abstract class BaseDBFragment<DB : ViewDataBinding> : BaseFragment() {
     lateinit var mDataBind: DB
     abstract fun layoutId(): Int
 
-    override fun setContent(
+    override fun setLayout(
         inflater: LayoutInflater,
         container: ViewGroup?
     ): View {

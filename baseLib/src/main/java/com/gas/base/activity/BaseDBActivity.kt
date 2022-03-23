@@ -10,7 +10,7 @@ abstract class BaseDBActivity<DB : ViewDataBinding> : BaseActivity() {
 
     abstract fun layoutId(savedInstanceState: Bundle?): Int
 
-    override fun setContent(savedInstanceState: Bundle?) {
+    override fun setLayout(savedInstanceState: Bundle?) {
         mDataBind = DataBindingUtil.setContentView(this, layoutId(savedInstanceState))
         mDataBind.lifecycleOwner = this
     }
