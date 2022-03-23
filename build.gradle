@@ -49,7 +49,7 @@ ext {
     okhttpInterceptorVersion = '4.9.0'
     mockVersion = '1.10.5'
     annotationVersion ='1.1.0'
-    glid = '4.11.0'
+    glideVersion = '4.12.0'
     hilt_viewmodels = '1.0.0-alpha03'
     picassoVersion = '2.71828'
     livedata_ktx='2.3.0'
