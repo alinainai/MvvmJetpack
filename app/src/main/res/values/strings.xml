@@ -28,4 +28,5 @@
     <string name="add_to_favorite">Add to favorite</string>
     <string name="test_password">ljx19886504</string>
     <string name="test_email">569932357@qq.com</string>
+    <string name="common_code_send">发送验证码</string>
 </resources>

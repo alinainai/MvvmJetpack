@@ -1,6 +1,6 @@
 package com.gas.ext.app
 
-import com.mihua.BuildConfig
+import com.gas.baselib.BuildConfig
 import timber.log.Timber
 
 object LogExt {

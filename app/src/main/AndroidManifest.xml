@@ -15,12 +15,13 @@
         android:icon="@mipmap/ic_launcher"
         android:preserveLegacyExternalStorage="true"
         android:requestLegacyExternalStorage="true"
-        android:theme="@style/ActionBarAppTheme"
+        android:theme="@style/AppTheme"
         tools:ignore="LockedOrientationActivity">
         <activity
             android:name=".ui.login.LoginActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme">
+            android:theme="@style/AppTheme"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

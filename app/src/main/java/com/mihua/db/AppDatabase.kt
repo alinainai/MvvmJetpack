@@ -7,7 +7,7 @@ import com.mihua.bean.Pokemon
 import com.mihua.bean.PokemonInfo
 
 
-@Database(entities = [Pokemon::class, PokemonInfo::class], version = 1, exportSchema = true)
+@Database(entities = [Pokemon::class, PokemonInfo::class], version = 1, exportSchema = false)
 @TypeConverters(value = [TypeResponseConverter::class])
 abstract class AppDatabase : RoomDatabase() {
 

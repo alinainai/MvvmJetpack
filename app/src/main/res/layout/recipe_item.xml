@@ -17,7 +17,7 @@
             android:id="@+id/iv_recipe_item_image"
             android:layout_width="@dimen/image_view_width"
             android:layout_height="@dimen/image_view_height"
-            android:background="@color/image_background"
+            android:background="@color/white"
             app:srcCompat="@drawable/ic_healthy_food"
             android:scaleType="centerInside"
             app:layout_constraintBottom_toBottomOf="parent"

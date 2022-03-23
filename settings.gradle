@@ -1,2 +1,4 @@
+include ':baseLib'
 include ':app'
 rootProject.name = "MvvmJetpack"
+

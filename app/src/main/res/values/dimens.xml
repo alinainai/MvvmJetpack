@@ -13,4 +13,12 @@
     <dimen name="space_48x">48dp</dimen>
     <dimen name="space_64x">64dp</dimen>
     <dimen name="space_96x">96dp</dimen>
+    <!-- 默认分割线大小 -->
+    <dimen name="line_size">1px</dimen>
+
+    <!-- 默认按钮的圆角大小 -->
+    <dimen name="button_circle_size">999dp</dimen>
+
+    <!-- 通用对话框圆角大小 -->
+    <dimen name="dialog_ui_round_size">15dp</dimen>
 </resources>
