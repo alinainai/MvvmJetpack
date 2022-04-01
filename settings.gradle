@@ -2,3 +2,4 @@ include ':baseLib'
 include ':app'
 rootProject.name = "MvvmJetpack"
 
+include ':widget'
