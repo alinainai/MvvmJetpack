@@ -3,3 +3,7 @@ include ':app'
 rootProject.name = "MvvmJetpack"
 
 include ':widget'
+include ':commonsdk'
+include ':commonlib'
+include ':baseui'
+include ':paginate'

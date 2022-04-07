@@ -1,0 +1,21 @@
+<resources>
+    <string name="public_app_name">baseui</string>
+    <string name="public_str_status_view_empty">暂无数据, 点击重新加载</string>
+    <string name="public_str_status_view_failed">加载失败, 点击重新加载</string>
+    <string name="public_str_status_view_loading">玩命加载中&#8230;</string>
+    <string name="public_str_empty">""</string>
+    <string name="public_str_title">这里要显示一个标题</string>
+    <string name="public_str_message">这里要显示一段文本</string>
+    <string name="public_str_background">background</string>
+    <string name="public_refresh_header_reset">&#8194;&#8194;下拉刷新&#8194;&#8194;</string>
+    <string name="public_refresh_header_pull_over">&#8194;&#8194;释放刷新&#8194;&#8194;</string>
+    <string name="public_refresh_header_refreshing">&#8194;&#8194;加载中&#8194;&#8194;</string>
+    <string name="public_refresh_header_load_success">&#8194;&#8194;加载完成&#8194;&#8194;</string>
+    <string name="public_refresh_header_load_fail">&#8194;&#8194;加载失败&#8194;&#8194;</string>
+    <string name="public_common_cancel">取消</string>
+
+
+
+
+
+</resources>
