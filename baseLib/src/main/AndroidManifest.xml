@@ -2,4 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.gas.baselib">
 
+    <application>
+        <activity
+            android:name="com.gas.container.FragmentContainerActivity"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+    </application>
+
 </manifest>
