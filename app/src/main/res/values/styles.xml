@@ -113,9 +113,7 @@
 
     <!--     防止冷启动白屏-->
     <style name="public_app_theme_noBar" parent="public_app_theme">
-        <!-- Customize your theme here. -->
         <item name="android:windowBackground">@drawable/app_splash_bg</item>
-        <item name="android:windowFullscreen">true</item>
     </style>
 
 </resources>

@@ -11,8 +11,9 @@ import com.mihua.ljxbao.R
 import com.mihua.ljxbao.ui.main.home.HomeFragment
 import com.mihua.ljxbao.ui.main.mine.MineFragment
 import com.mihua.ljxbao.ui.main.more.MoreFragment
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class MainActivity : BaseVMActivity() {
     private val mVm: MainViewModel by viewModels()
 
@@ -25,9 +26,9 @@ class MainActivity : BaseVMActivity() {
 
     override fun initData(savedInstanceState: Bundle?) {
         mVp = findViewById(R.id.view_pager2)
-        btnMain = findViewById(R.id.button)
-        btnMore = findViewById(R.id.button1)
-        btnMine = findViewById(R.id.button2)
+        btnMain = findViewById(R.id.btnHome)
+        btnMore = findViewById(R.id.btnMore)
+        btnMine = findViewById(R.id.btnMine)
         btnMain.setOnClickListener {
             mVp.setCurrentItem(0,false)
         }
