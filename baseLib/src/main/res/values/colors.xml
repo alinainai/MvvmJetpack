@@ -69,4 +69,8 @@
     <!-- 橙色 -->
     <color name="orange">#FFFFA500</color>
 
+    <color name="deep_black">#333333</color>
+    <color name="light_black">#999999</color>
+    <color name="normal_black">#666666</color>
+
 </resources>

@@ -14,6 +14,7 @@ import com.gas.ext.app.visible
 import com.mihua.ljxbao.R
 import com.mihua.ljxbao.bean.Resource
 import com.mihua.ljxbao.ui.ComposeActivity
+import com.mihua.ljxbao.ui.login.LoginActivity
 import com.mihua.ljxbao.ui.main.MainActivity
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -22,10 +23,12 @@ class SplashActivity : BaseVMActivity() {
 
     private val mVm: SplashViewModel by viewModels()
 
-    override fun layoutId(savedInstanceState: Bundle?) = R.layout.activity_login
+    override fun layoutId(savedInstanceState: Bundle?) = R.layout.activity_splash
 
     override fun initData(savedInstanceState: Bundle?) {
-
+        findViewById<View>(R.id.tvSkip).setOnClickListener {
+            startActivity(Intent(this,LoginActivity::class.java))
+        }
     }
 
 }
