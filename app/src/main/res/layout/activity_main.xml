@@ -8,7 +8,10 @@
         android:id="@+id/view_pager2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintBottom_toTopOf="@+id/main_ll_bottom" />
+        app:layout_constraintBottom_toTopOf="@+id/main_ll_bottom">
+
+
+    </androidx.viewpager2.widget.ViewPager2>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/main_ll_bottom"
@@ -21,42 +24,43 @@
 
         <TextView
             android:id="@+id/btnHome"
-            android:layout_width="80dp"
-            android:layout_height="50dp"
+            android:layout_width="@dimen/dp_80"
+            android:layout_height="46dp"
+            android:layout_marginStart="@dimen/dp_30"
             android:drawableTop="@drawable/home_main_s"
             android:gravity="center"
             android:text="首页"
             android:textSize="@dimen/dp_10"
+            android:textColor="@color/bottom_text_color"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/btnMore"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toStartOf="parent" />
+
 
         <TextView
             android:id="@+id/btnMore"
-            android:layout_width="80dp"
-            android:layout_height="50dp"
+            android:layout_width="@dimen/dp_80"
+            android:layout_height="46dp"
             android:drawableTop="@drawable/home_class_bg"
             android:gravity="center"
             android:text="推荐"
             android:textSize="@dimen/dp_10"
+            android:textColor="@color/bottom_text_color"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/btnMine"
-            android:layout_width="80dp"
-            android:layout_height="50dp"
+            android:layout_width="@dimen/dp_80"
+            android:layout_height="46dp"
+            android:layout_marginEnd="@dimen/dp_30"
             android:drawableTop="@drawable/home_mine_bg"
             android:gravity="center"
             android:text="我的"
+            android:textColor="@color/bottom_text_color"
             android:textSize="@dimen/dp_10"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/btnMore"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

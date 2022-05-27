@@ -15,6 +15,7 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainActivity : BaseVMActivity() {
+
     private val mVm: MainViewModel by viewModels()
 
     private lateinit var mVp: ViewPager2
@@ -22,7 +23,10 @@ class MainActivity : BaseVMActivity() {
     private lateinit var btnMine: View
     private lateinit var btnMore: View
 
-    override fun layoutId(savedInstanceState: Bundle?)= R.layout.activity_main
+    override fun layoutId(savedInstanceState: Bundle?) :Int{
+        getStatusBarConfig().init()
+        return R.layout.activity_main
+    }
 
     override fun initData(savedInstanceState: Bundle?) {
         mVp = findViewById(R.id.view_pager2)
@@ -31,12 +35,21 @@ class MainActivity : BaseVMActivity() {
         btnMine = findViewById(R.id.btnMine)
         btnMain.setOnClickListener {
             mVp.setCurrentItem(0,false)
+            btnMain.isSelected = true
+            btnMore.isSelected = false
+            btnMine.isSelected = false
         }
         btnMore.setOnClickListener {
             mVp.setCurrentItem(1,false)
+            btnMain.isSelected = false
+            btnMore.isSelected = true
+            btnMine.isSelected = false
         }
         btnMine.setOnClickListener {
             mVp.setCurrentItem(2,false)
+            btnMain.isSelected = false
+            btnMore.isSelected = false
+            btnMine.isSelected = true
         }
         //禁止滑动
         mVp.isUserInputEnabled = false
@@ -47,5 +60,6 @@ class MainActivity : BaseVMActivity() {
         val mAdapter = MainFragmentAdapter(this, mFragments)
         mVp.offscreenPageLimit = mFragments.size-1
         mVp.adapter = mAdapter
+        btnMain.isSelected = true
     }
 }
