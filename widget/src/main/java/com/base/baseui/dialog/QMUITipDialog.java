@@ -27,18 +27,6 @@ import com.base.baseui.view.QMUILoadingView;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-
-/**
- * ================================================
- * desc: loading框
- *
- * created by author ljx
- * Date  2020-02-07
- * email 569932357@qq.com
- *
- * ================================================
- */
-
 public class QMUITipDialog extends Dialog {
 
     public QMUITipDialog(Context context) {
